@@ -47,16 +47,16 @@ export default function Home() {
       });
 
       console.log(response);
-      // if (response.ok) {
-      //   const data = await response.json();
-      //   if (data.isCat) {
-      //     setCatThoughts(data.thoughts);
-      //   } else {
-      //     alert('The uploaded image is not a cat image.');
-      //   }
-      // } else {
-      //   alert('Failed to upload the image.');
-      // }
+      if (response.ok) {
+        const data = await response.json();
+        if (data.isCat) {
+          setCatThoughts(data.thoughts);
+        } else {
+          alert('The uploaded image is not a cat image.');
+        }
+      } else {
+        alert('Failed to upload the image.');
+      }
     } catch (error) {
       console.error('Error uploading image:', error);
       alert('An error occurred while uploading the image.');
