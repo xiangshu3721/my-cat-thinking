@@ -47,9 +47,9 @@ export default function Home() {
       });
 
       console.log(response);
+      console.log("1111",await response.json())
       if (response.ok) {
         const data = await response.json();
-        console.log(data);
         if (data.isCat) {
           setCatThoughts(data.thoughts);
         } else {
