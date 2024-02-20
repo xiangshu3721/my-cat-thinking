@@ -86,7 +86,7 @@ router.all((req, res, next) => {
   
       const responseText = result.response.text();
       console.log('Response from Gemini API:', responseText); // 添加日志输出
-      res.status(200).json({ result: responseText });
+      res.status(200).json({ result: '123123' });
     } catch (error) {
         console.error('Error during request:', error);
         res.status(500).json({ error: 'Internal Server Error' });

@@ -49,6 +49,7 @@ export default function Home() {
       console.log(response);
       if (response.ok) {
         const data = await response.json();
+        console.log(data);
         if (data.isCat) {
           setCatThoughts(data.thoughts);
         } else {
