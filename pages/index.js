@@ -47,14 +47,13 @@ export default function Home() {
       });
 
       console.log(response);
-      console.log("1111",await response.json())
       if (response.ok) {
         const data = await response.json();
-        if (data.isCat) {
-          setCatThoughts(data.thoughts);
-        } else {
-          alert('The uploaded image is not a cat image.');
-        }
+        // if (data.isCat) {
+          setCatThoughts(data.result);
+        // } else {
+        //   alert('The uploaded image is not a cat image.');
+        // }
       } else {
         alert('Failed to upload the image.');
       }
