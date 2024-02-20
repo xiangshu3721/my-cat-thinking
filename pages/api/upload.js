@@ -72,10 +72,6 @@ router.all((req, res, next) => {
         },
       ];
   
-
-      const genAI = new GoogleGenerativeAI(API_KEY);
-      const model = genAI.getGenerativeModel({ model: MODEL_NAME });
-
       const result = await model.generateContent({
         contents: [{ role: 'user', parts }],
         generationConfig,
